@@ -19,10 +19,11 @@
             </div>
             <ul class="menu-list">
                 @foreach ($headerLinks as $link)
-                <li class="{{ Route::currentRouteName() == '/movies' ? 'active' : '' }}">
-                <a href="{{$link['route']}}">
-                    {{$link['title']}}
-                </a></li>                    
+                <li class="{{ Route::currentRouteName() == $link['route'] ? 'active' : '' }}">
+                    <a href="{{ $link['route'] }}">
+                        {{$link['title']}}
+                    </a>                    
+                </li>
                 @endforeach
             </ul>
             <div class="search">

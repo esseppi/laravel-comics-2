@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/characters', function () {
     return view('characters');
-})->name('games');
+})->name('characters');
 
 Route::get('/games', function () {
     return view('games');
@@ -23,7 +23,7 @@ Route::get('/games', function () {
 
 Route::get('/comics', function () {
     return view('comics');
-});
+})->name('comics');
 
 Route::get('/movies', function () {
     return view('movies');
