@@ -13,17 +13,18 @@
     <nav class="navigator">
         <div class="container row-header">
             <div class="logo">
-                <img src="./images/dc-logo.png" alt="">
+                <a href="/">
+                    <img src="./images/dc-logo.png" alt="">
+                </a>
             </div>
-
             <ul class="menu-list">
                 @foreach ($headerLinks as $link)
-                <li><a href="{{$link['route']}}">
+                <li class="{{ Route::currentRouteName() == '/movies' ? 'active' : '' }}">
+                <a href="{{$link['route']}}">
                     {{$link['title']}}
                 </a></li>                    
                 @endforeach
             </ul>
-
             <div class="search">
                 <input class="inp-search" placeholder="Search" type="text">
             </div>

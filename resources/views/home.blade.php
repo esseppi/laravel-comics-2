@@ -1,5 +1,6 @@
 @extends('template/main')
 @section('title', 'Home-Comics')
+@section('css', './css/app.css')
 @section('content')
 <div class="main-home">
     <div class="hero">
@@ -15,7 +16,7 @@
             @foreach ($albums as $album)
             <div class="card">
                 <div class="card-logo">
-                    <img src="{{$album['thumb']}}" alt="{{$album['title']}}">
+                    <a href="/{{$album['id']}}"><img src="{{$album['thumb']}}" alt="{{$album['title']}}"></a>
                 </div>
                 <div class="card-text">
                     <h3>{{$album['series']}}</h3>

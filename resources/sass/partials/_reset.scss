@@ -3,3 +3,12 @@
     margin: 0;
     padding: 0;
 }
+.fake{
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.active{
+    background: black;
+}
